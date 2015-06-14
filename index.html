@@ -1,1 +1,25 @@
-test
+<html>
+  <head>
+    <title>K^2</title>
+    <style>
+      body { margin: 0; }
+      #kk { width: 100%; height: 100%; }
+    </style>
+    <script>
+      var x = 20, y = 0, dx = 1, dy = 1;
+      function start(con) {
+        con.fillText('k', x, y);
+        if(x < 0 || x > window.innerWidth) dx = -dx;
+        if(y < 0 || y > window.innerHeight) dy = -dy;
+        x += dx;
+        y += dy;
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="kk"></canvas>
+    <script>
+      document.body.onload = function() { var kk = document.getElementById('kk'); kk.width = window.innerWidth; kk.height = window.innerHeight; var kk_con = kk.getContext('2d'); start(kk_con); }
+    </script>
+  </body>
+</html>
