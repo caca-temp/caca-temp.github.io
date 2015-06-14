@@ -27,9 +27,9 @@
 	  img;
       function start(con) {
 		con.fillStyle = couleeeurs[Math.floor(Math.random() * 7)];
-        con.drawImage(img, x, y);
+        con.drawImage(document.getElementById("bg"), x, y);
 		con.fillStyle = couleeeurs[Math.floor(Math.random() * 7)];
-		con.drawImage(img, bx, by);
+		con.drawImage(document.getElementById("bg"), bx, by);
         if(x < 0 || x > window.innerWidth) dx = -dx;
 		if(bx < 0 || bx > window.innerWidth) bdx = -bdx;
 		if(by < 0 || by > window.innerHeight) bdy = -bdy;
@@ -42,7 +42,7 @@
       }
     </script>
   </head>
-  <body onload="console.log(0); img=document.getElementById("bg");var kk = document.getElementById('kk'); kk.width = window.innerWidth; kk.height = window.innerHeight; var kk_con = kk.getContext('2d'); start(kk_con);">
+  <body onload="console.log(0);var kk = document.getElementById('kk'); kk.width = window.innerWidth; kk.height = window.innerHeight; var kk_con = kk.getContext('2d'); start(kk_con);">
     <canvas id="kk"></canvas>
 	<iframe src="http://www.youtube.com/embed/jU6iP0WLsU8?autoplay=1" style="display:none;" width="960" height="447" frameborder="0" allowfullscreen></iframe>
 	<img src="http://i.imgur.com/UCY9216.jpg?1"/ id="bg">
