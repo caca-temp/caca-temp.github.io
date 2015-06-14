@@ -22,12 +22,13 @@
     <script>
       var couleeeurs = ['blue','green','red','brown','purple', 'pink', 'orange', 'white'];
       var x = 20, y = 0, dx = 10, dy = 10;
-	  var bx = 105, by = 205, bdx = -20, bdy = 20;
+	  var bx = 105, by = 205, bdx = -20, bdy = 20,
+	  img=document.getElementById("bg");
       function start(con) {
 		con.fillStyle = couleeeurs[Math.floor(Math.random() * 7)];
-        con.fillText('k', x, y);
+        con.drawImage(img, x, y);
 		con.fillStyle = couleeeurs[Math.floor(Math.random() * 7)];
-		con.fillText('π', bx, by);
+		con.drawImage(img, bx, by);
         if(x < 0 || x > window.innerWidth) dx = -dx;
 		if(bx < 0 || bx > window.innerWidth) bdx = -bdx;
 		if(by < 0 || by > window.innerHeight) bdy = -bdy;
