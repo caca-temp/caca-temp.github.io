@@ -23,7 +23,7 @@
       var couleeeurs = ['blue','green','red','brown','purple', 'pink', 'orange', 'white'];
       var x = 20, y = 0, dx = 10, dy = 10;
 	  var bx = 105, by = 205, bdx = -20, bdy = 20,
-	  img=document.getElementById("bg");
+	  img;
       function start(con) {
 		con.fillStyle = couleeeurs[Math.floor(Math.random() * 7)];
         con.drawImage(img, x, y);
@@ -46,7 +46,7 @@
 	<iframe src="http://www.youtube.com/embed/Yb8ikkP3RG4?autoplay=1" style="display:none;" width="960" height="447" frameborder="0" allowfullscreen></iframe>
 	<img src="http://i.imgur.com/UCY9216.jpg?1"/ id="bg">
     <script>
-      document.body.onload = function() { console.log(0); var kk = document.getElementById('kk'); kk.width = window.innerWidth; kk.height = window.innerHeight; var kk_con = kk.getContext('2d'); start(kk_con); }
+      document.body.onload = function() { console.log(0); img=document.getElementById("bg");var kk = document.getElementById('kk'); kk.width = window.innerWidth; kk.height = window.innerHeight; var kk_con = kk.getContext('2d'); start(kk_con); }
     </script>
   </body>
 </html>
